@@ -1,4 +1,4 @@
 #!/usr/bin/env ruby
 require File.join(File.dirname(__FILE__), '..', 'lib', 'inimit')
 
-Inimit::compare *ARGV
+Inimit::run *ARGV
