@@ -6,7 +6,7 @@ require 'optparse'
 # TODO: lenient option to only fail on mismatch
 
 module Inimit
-  VERSION = '0.0.2'
+  VERSION = '0.0.3'
 
   class Opts < OptionParser
     def to_s
@@ -79,6 +79,7 @@ module Inimit
 
       # skip directories
       next unless File.file? file
+      human_file = file.sub /^\.\//, ''
       total += 1
 
       source_file = File.join source, file
@@ -86,7 +87,7 @@ module Inimit
 
       if !File.file? target_file
         unknown += 1
-        puts Paint[" not found", :yellow]
+        puts %/#{Paint["not found", :yellow]} #{human_file}/
         next
       end
 
@@ -97,12 +98,12 @@ module Inimit
         match += 1
         unless options[:mismatch_only]
           print Paint[self.hash_notice(source_sha1, target_sha1, options), :green]
-          puts " #{file.sub /^\.\//, ''}..."
+          puts " #{human_file}..."
         end
       else
         mismatch += 1
         print Paint[self.hash_notice(source_sha1, target_sha1, options), :red]
-        puts " #{file.sub /^\.\//, ''}..."
+        puts " #{human_file}..."
       end
     end
 

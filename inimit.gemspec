@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = "inimit"
-  s.version = "0.0.2"
+  s.version = "0.0.3"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["AlphaHydrae"]
-  s.date = "2012-09-12"
+  s.date = "2012-09-13"
   s.description = "Compares files in two directories using SHA1."
   s.email = "hydrae.alpha@gmail.com"
   s.executables = ["inimit"]
