@@ -81,11 +81,11 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  bundler (~> 1.5.1)
+  bundler (~> 1.5)
   coveralls (~> 0.7)
-  jeweler (~> 2.0.1)
-  paint (~> 0.8.7)
-  rake (~> 10.1.1)
-  rake-version (~> 0.4.1)
-  rspec (~> 2.14.1)
+  jeweler (~> 2.0)
+  paint (~> 0.8)
+  rake (~> 10.1)
+  rake-version (~> 0.4)
+  rspec (~> 2.14)
   simplecov (~> 0.8)
