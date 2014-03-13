@@ -5,7 +5,7 @@ require 'optparse'
 
 # TODO: lenient option to only fail on mismatch
 
-module Inimit
+module Kompar
   VERSION = '0.0.3'
 
   class Opts < OptionParser
@@ -21,7 +21,7 @@ module Inimit
       :mismatch_only => false
     }
     Opts.new do |opts|
-      opts.banner = "#{Paint[opts.program_name, :bold]} recursively compares files.\n\nUsage:\n    inimit [OPTION]... [SOURCE] TARGET\n"
+      opts.banner = "#{Paint[opts.program_name, :bold]} recursively compares files.\n\nUsage:\n    kompar [OPTION]... [SOURCE] TARGET\n"
       opts.version = VERSION
       opts.on('-d', '--digest ALGORITHM', 'Use ALGORITHM to hash file contents (available: md5, sha1, sha256, sha384, sha512)') do |digest|
         options[:digest] = digest
