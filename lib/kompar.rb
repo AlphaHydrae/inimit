@@ -6,7 +6,7 @@ require 'optparse'
 # TODO: lenient option to only fail on mismatch
 
 module Kompar
-  VERSION = '0.0.3'
+  VERSION = '0.0.4'
 
   class Opts < OptionParser
     def to_s
