@@ -1,4 +1,2 @@
-#!/usr/bin/env ruby
-require File.join(File.dirname(__FILE__), '..', 'lib', 'kompar')
-
-Kompar.run *ARGV
+#!/usr/bin/env node
+require('../lib').cli(process.argv);
